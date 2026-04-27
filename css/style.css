@@ -1,5 +1,5 @@
 :root {
-    --primary: #2563eb;
+    --primary: #0D9488;
     --primary-dark: #1d4ed8;
     --accent: #f97316;
     --dark: #0f172a;
@@ -63,6 +63,40 @@ body {
 .hero { padding: 100px 0; background: radial-gradient(circle at top right, #eff6ff, #fff); }
 .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 
+/* Container Visual */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kartu Kaca yang membungkus gambar */
+.glass-card-hero {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Untuk Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 32px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Ukuran maksimal kartu agar tidak kebesaran */
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.glass-card-hero:hover {
+    transform: translateY(-15px) rotate(2deg); /* Efek melayang saat dihover */
+}
+
+/* Pengaturan Gambar */
+.glass-card-hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    object-fit: cover;
+}
+
 .badge {
     background: #dbeafe;
     color: var(--primary);
@@ -96,6 +130,24 @@ body {
     border-radius: 12px;
     text-decoration: none;
     font-weight: 700;
+}
+
+.btn-outline {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: #fff;
 }
 
 /* FEATURES */
